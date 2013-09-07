@@ -15,7 +15,7 @@ html(ng-app='cornerApp')
             span.icon-bar
           a(href='#').brand #{brand}
           ul.nav
-            - var obj = { 'home':'Home', 'about':'About' }
+            - var obj = { '/':'Home', 'about':'About' }
               - each val, key in obj
                 - if (id == key)
                   li.active
