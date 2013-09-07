@@ -1,6 +1,7 @@
 extends layout
-
-block content
-  div.hero-unit
-    h1= title
-    p Welcome to #{title}
+div
+    block content
+      div.hero-unit(ng-controller='HomeController')
+        h1= title
+        p Welcome to #{title}
+        {{"Angular is working" + 56 +4543}}
