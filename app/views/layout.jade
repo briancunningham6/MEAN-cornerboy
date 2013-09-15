@@ -1,5 +1,5 @@
 doctype 5
-html(ng-app='cornerApp')
+html(ng-app='cornerboy')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
@@ -8,23 +8,7 @@ html(ng-app='cornerApp')
 
   body
     div.navbar.navbar-fixed-top
-      div.navbar-inner
-        div.container
-          a(data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a(href='#').brand #{brand}
-          ul.nav
-            - var obj = { '/':'Home', 'about':'About' }
-              - each val, key in obj
-                - if (id == key)
-                  li.active
-                    a(href='#{key}') #{val}
-                - else
-                  li
-                    a(href='#{key}') #{val}
-
+        header.navbar.navbar-fixed-top.navbar-inverse(data-ng-include="'views/header.html'")
     div.container!= body
     block content
 

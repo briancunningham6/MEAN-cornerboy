@@ -1,10 +1,10 @@
 extends layout
 div
     block content
-        script(type="text/javascript").
-            window.user = !{user};
+      section(data-ng-view)
+      script(type="text/javascript").
+        window.user = !{user};
       div.hero-unit(ng-controller='HomeController')
-        h1= title
         p Welcome to #{title}
         p {{"Angular is working:" + 56 +4543}}
         div
